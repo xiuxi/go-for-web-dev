@@ -1,0 +1,3 @@
+module github.com/larryprice/go-for-web-dev
+
+go 1.19

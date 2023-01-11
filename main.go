@@ -4,23 +4,24 @@ import (
 	"net/http"
 
 	"database/sql"
-	_ "github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/lib/pq"
-	_ "github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/mattn/go-sqlite3"
-	"github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/gopkg.in/gorp.v1"
+	_ "github.com/lib/pq"
+	_ "github.com/mattn/go-sqlite3"
+	"gopkg.in/gorp.v1"
 
 	"encoding/json"
 	"encoding/xml"
-	"github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/golang.org/x/crypto/bcrypt"
+	"golang.org/x/crypto/bcrypt"
 	"io/ioutil"
 	"net/url"
 	"os"
 	"strconv"
 
-	"github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/urfave/negroni"
-	"github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/goincremental/negroni-sessions"
-	"github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/goincremental/negroni-sessions/cookiestore"
-	gmux "github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/gorilla/mux"
-	"github.com/larryprice/go-for-web-dev/Godeps/_workspace/src/github.com/yosssi/ace"
+	"github.com/urfave/negroni"
+	"github.com/goincremental/negroni-sessions"
+	"github.com/goincremental/negroni-sessions/cookiestore"
+
+	gmux "github.com/gorilla/mux"
+	"github.com/yosssi/ace"
 )
 
 type Book struct {
